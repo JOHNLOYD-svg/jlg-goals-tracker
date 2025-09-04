@@ -13,7 +13,7 @@ export function GoalsProvider({ children }) {
  
   async function createGoal(goalData) {
     console.log(goalData)
-    await addDoc(collection(db, 'student'), goalData)
+    await addDoc(collection(db, 'goals'), goalData)
   }
 
   async function deleteGoal() {
@@ -30,3 +30,4 @@ export function GoalsProvider({ children }) {
     </GoalsContext.Provider>
   )
 }
+
